@@ -10,7 +10,7 @@ spring:
           uri: https://github.com/MrKraus/springcloud/  # 配置git仓库的地址
           search-paths: config-repo                     # git仓库地址下的相对地址，可以配置多个，用,分割。
           username: 839376636@qq.com                    # git仓库的账号
-          password: 839376636qq                         # git仓库的密码
+          password:                          # git仓库的密码
 eureka:
   client:
     serviceUrl:
