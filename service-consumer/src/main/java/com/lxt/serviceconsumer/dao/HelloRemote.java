@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * 1.2018/12/16 刘小通 & new
  */
 @FeignClient(name= "spring-cloud-provider",fallback = HelloRemoteHystrix.class)
-public interface HelloRemote {
+public interface HelloRemote{
     @RequestMapping(value = "/hello")
     public String hello(@RequestParam(value = "name") String name);
 }
