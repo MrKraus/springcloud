@@ -7,10 +7,15 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/MrKraus/springcloud/  # 配置git仓库的地址
+          uri: https://github.com/hdlxt/springcloud # 配置git仓库的地址
           search-paths: config-repo                     # git仓库地址下的相对地址，可以配置多个，用,分割。
           username: 839376636@qq.com                    # git仓库的账号
-          password:                          # git仓库的密码
+          password: lxtdgithub509703                          # git仓库的密码
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
 eureka:
   client:
     serviceUrl:
