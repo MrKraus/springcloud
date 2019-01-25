@@ -30,4 +30,4 @@ eureka:
     endpoints:
       web:
         exposure:
-          include: '*'
+          include: bus-refresh
