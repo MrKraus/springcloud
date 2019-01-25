@@ -8,7 +8,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>eureka-server</module>
+        <module>exureka-server</module>
         <module>service-provider</module>
         <module>service-provider1</module>
         <module>service-consumer</module>
@@ -19,6 +19,7 @@
         <module>config-server</module>
         <module>config-server1</module>
         <module>config-client</module>
+        <module>zuul</module>
     </modules>
 
     <parent>
