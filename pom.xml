@@ -20,6 +20,8 @@
         <module>config-server1</module>
         <module>config-client</module>
         <module>zuul</module>
+        <module>consul-provider</module>
+        <module>consul-consumer</module>
     </modules>
 
     <parent>

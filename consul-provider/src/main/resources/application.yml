@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: spring-cloud-consul-provider  #注册到consul的服务名称
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: consul-provider #注册到consul的服务名称
+        hostname: localhost #本机测试使用
+server:
+  port: 8010
