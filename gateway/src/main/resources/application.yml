@@ -1,0 +1,10 @@
+server:
+  port: 8020
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id:  test_route
+          uri: http://xiaotong.site
+          predicates:
+            - Path=/archives
