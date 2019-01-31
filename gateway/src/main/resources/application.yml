@@ -1,10 +1,24 @@
 server:
   port: 8020
 spring:
+  application:
+    name: gateaway
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
       routes:
-        - id:  test_route
-          uri: http://xiaotong.site
-          predicates:
-            - Path=/archives
+      - id: test_route
+        uri: lb://spring-cloud-provider
+        predicates:
+        - Method=GET
+        filters:
+        - AddRequestParameter=foo,bar
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+logging:
+  level:
+    org.springframework.cloud.gateway: debug

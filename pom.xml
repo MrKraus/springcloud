@@ -22,6 +22,7 @@
         <module>zuul</module>
         <module>consul-provider</module>
         <module>consul-consumer</module>
+        <module>gateway</module>
     </modules>
 
     <parent>
