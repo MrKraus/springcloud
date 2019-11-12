@@ -1,13 +1,41 @@
+
 spring:
   application:
-    name: spring-cloud-eureka
+    name: spring-cloud-eureka #服务名称
+---
+spring:
+  profiles: center
 server:
   port: 8000
 eureka:
   instance:
-    hostname: localhost
+    hostname: center
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    #register-with-eureka: false #表示是否将自己注册到Eureka Server，默认为true。
+    ##fetch-registry: false #表示是否从Eureka Server获取注册信息，默认为true。
     serviceUrl:
-      defaultZone: http://localhost:8000/eureka
+      defaultZone: http://center1:8100/eureka/,http://center2:8200/eureka/ #服务地址，多个可用逗号【,】分隔
+---
+spring:
+  profiles: center1
+server:
+  port: 8100
+eureka:
+  instance:
+    hostname: center1
+  client:
+    serviceUrl:
+      defaultZone: http://center:8000/eureka/,http://center2:8200/eureka/ #服务地址，多个可用逗号【,】分隔
+---
+spring:
+  profiles: center2
+server:
+  port: 8200
+eureka:
+  instance:
+    hostname: center2
+  client:
+    serviceUrl:
+      defaultZone: http://center:8000/eureka/,http://center1:8100/eureka/ #服务地址，多个可用逗号【,】分隔
+---
+
