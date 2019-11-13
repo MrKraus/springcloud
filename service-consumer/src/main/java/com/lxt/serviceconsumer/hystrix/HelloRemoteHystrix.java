@@ -5,12 +5,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * @author 刘小通
- * @Copy Right Information: 中科软科技股份有限公司
- * @Project: GTS4
+ * @author lxt
+ * @Copy Right Information: lxt
+ * @Project: spring cloud
  * @CreateDate: 2018/12/16 15:58
  * @history Sr Date Modified By Why & What is modified
- * 1.2018/12/16 刘小通 & new
+ * 1.2018/12/16 lxt & new
  */
 @Component
 public class HelloRemoteHystrix implements HelloRemote {
