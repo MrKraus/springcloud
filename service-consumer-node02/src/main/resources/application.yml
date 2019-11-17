@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: hystrix-client2
+server:
+  port: 9006
+
+feign:
+  hystrix:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream # 暴露endpoints节点 2.x版本需要手动开启
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/

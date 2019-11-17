@@ -22,7 +22,7 @@ public class SpringCloudConsumerHystrixApplication {
     }
 
     /**
-     * 解决：Unable to connect to Command Metric Stream.
+     * 解决：找不到/hystrix.stream 报错：=>Unable to connect to Command Metric Stream.
      * @return
      */
     @Bean

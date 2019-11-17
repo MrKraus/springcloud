@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: hystrix-client1
+server:
+  port: 9005
+
+feign:
+  hystrix:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        # 2.x手动开启  这个是用来暴露 endpoints 的。由于 endpoints 中会包含很多敏感信息，除了 health 和 info 两个支持 web 访问外，其他的默认不支持 web 访问
+        include: hystrix.stream
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+
+
