@@ -26,8 +26,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8000/eureka/   #注册中心eurka地址
-#management:
-# endpoints:
-#    web:
-#      exposure:
-#        include: bus-refresh
+management:
+ endpoints:
+    web:
+      exposure:
+        include: bus-refresh
