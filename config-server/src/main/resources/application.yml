@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8002
 spring:
   application:
     name: spring-cloud-config-server
@@ -17,11 +17,11 @@ spring:
 #       enabled: true
 #     refresh:
 #       enabled: true
-#  rabbitmq:
-#    host: 127.0.0.1
-#    port: 5672
-#    username: guest
-#    password: guest
+  rabbitmq:
+    host: 111.231.29.249
+    port: 5672
+    username: guest
+    password: guest
 eureka:
   client:
     serviceUrl:

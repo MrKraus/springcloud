@@ -2,13 +2,13 @@ spring:
   application:
     name: spring-cloud-config-client
   cloud:
-#    bus:
-#     enabled: true
-#  rabbitmq:
-#    host: 127.0.0.1
-#    port: 5672
-#    username: guest
-#    password: guest
+    bus:
+     enabled: true
+  rabbitmq:
+    host: 111.231.29.249
+    port: 5672
+    username: guest
+    password: guest
 management:
   endpoints:
     web:
