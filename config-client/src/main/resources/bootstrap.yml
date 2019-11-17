@@ -3,7 +3,7 @@ server:
 spring:
   cloud:
     config:
-      name: neo-config
+      name: lxt-config
       profile: dev
       label: master
       discovery:
