@@ -23,11 +23,11 @@ public class HelloController {
     @RequestMapping(value ="/hello", method = RequestMethod.GET)
     public String index(String name) {
         logger.info("request two name is "+name);
-//        try{
-//            Thread.sleep(1000000);
-//        }catch ( Exception e){
-//            logger.error(" hello two error",e);
-//        }
+        try{
+            Thread.sleep(1000000);
+        }catch ( Exception e){
+            logger.error(" hello two error",e);
+        }
         return "hello "+name+"，this is two messge";
     }
 

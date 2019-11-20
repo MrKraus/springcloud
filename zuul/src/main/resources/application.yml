@@ -1,6 +1,15 @@
 spring:
   application:
     name: gateway-zuul
+  #重点
+  zipkin:
+    #        base-url:当你设置sleuth-cli收集信息后通过http传输到zinkin-server时，需要在这里配置
+    base-url: http://localhost:9411
+    enabled: true
+  sleuth:
+    sampler:
+      #收集追踪信息的比率，如果是0.1则表示只记录10%的追踪数据，如果要全部追踪，设置为1（实际场景不推荐，因为会造成不小的性能消耗）
+      probability: 1.0
 server:
   port: 8006
 eureka:
@@ -11,7 +20,7 @@ zuul:
   routes:
     config-client:
       path: /lxt/**
-      serviceId:  spring-cloud-config-client
+      serviceId:  spring-cloud-consumer-hystrix
   retryable: true #是否开启重试功能
 ribbon:
   MaxAutoRetries: 2 #对当前服务的重试次数

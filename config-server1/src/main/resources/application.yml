@@ -24,4 +24,5 @@ management:
   endpoints:
     web:
       exposure:
+        #暴露
         include: bus-refresh

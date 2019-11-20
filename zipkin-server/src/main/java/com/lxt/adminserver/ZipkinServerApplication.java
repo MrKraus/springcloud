@@ -2,12 +2,14 @@ package com.lxt.adminserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import zipkin2.server.internal.EnableZipkinServer;
 
 @SpringBootApplication
-public class AdminServerApplication {
+@EnableZipkinServer
+public class ZipkinServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AdminServerApplication.class, args);
+        SpringApplication.run(ZipkinServerApplication.class, args);
     }
 
 }

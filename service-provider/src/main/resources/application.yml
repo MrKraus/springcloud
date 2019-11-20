@@ -3,8 +3,8 @@ spring:
         name: spring-cloud-provider
     #重点
     zipkin:
-        #base-url:当你设置sleuth-cli收集信息后通过http传输到zinkin-server时，需要在这里配置
-        #base-url: http://localhost:9411
+    #        base-url:当你设置sleuth-cli收集信息后通过http传输到zinkin-server时，需要在这里配置
+        base-url: http://localhost:9411
         enabled: true
     sleuth:
         sampler:

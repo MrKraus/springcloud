@@ -3,7 +3,9 @@ spring:
     name: spring-cloud-config-client
   cloud:
     bus:
-     enabled: true
+     trace:
+       # \u5F00\u542F\u6D88\u606F\u8DDF\u8E2A\u4E8B\u4EF6
+       enabled: true
   rabbitmq:
     host: 111.231.29.249
     port: 5672

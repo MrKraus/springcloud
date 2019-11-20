@@ -11,7 +11,7 @@ management:
   endpoints:
     web:
       exposure:
-        # 2.xÊÖ¶¯¿ªÆô  Õâ¸öÊÇÓÃÀ´±©Â¶ endpoints µÄ¡£ÓÉÓÚ endpoints ÖĞ»á°üº¬ºÜ¶àÃô¸ĞĞÅÏ¢£¬³ıÁË health ºÍ info Á½¸öÖ§³Ö web ·ÃÎÊÍâ£¬ÆäËûµÄÄ¬ÈÏ²»Ö§³Ö web ·ÃÎÊ
+        # 2.xæ‰‹åŠ¨å¼€å¯  è¿™ä¸ªæ˜¯ç”¨æ¥æš´éœ² endpoints çš„ã€‚ç”±äº endpoints ä¸­ä¼šåŒ…å«å¾ˆå¤šæ•æ„Ÿä¿¡æ¯ï¼Œé™¤äº† health å’Œ info ä¸¤ä¸ªæ”¯æŒ web è®¿é—®å¤–ï¼Œå…¶ä»–çš„é»˜è®¤ä¸æ”¯æŒ web è®¿é—®
         include: hystrix.stream
 eureka:
   client:

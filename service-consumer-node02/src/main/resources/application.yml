@@ -12,7 +12,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: hystrix.stream # 暴露endpoints节点 2.x版本需要手动开启
+        include: hystrix.stream
 eureka:
   client:
     service-url:
