@@ -1,4 +1,4 @@
-package com.lxt.adminserver;
+package com.lxt.zipkin;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

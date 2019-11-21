@@ -2,25 +2,31 @@ spring:
   application:
     name: gateway-zuul
   #重点
-  zipkin:
-    #        base-url:当你设置sleuth-cli收集信息后通过http传输到zinkin-server时，需要在这里配置
-    base-url: http://localhost:9411
-    enabled: true
-  sleuth:
-    sampler:
-      #收集追踪信息的比率，如果是0.1则表示只记录10%的追踪数据，如果要全部追踪，设置为1（实际场景不推荐，因为会造成不小的性能消耗）
-      probability: 1.0
+#  zipkin:
+#    #        base-url:当你设置sleuth-cli收集信息后通过http传输到zinkin-server时，需要在这里配置
+#    base-url: http://localhost:9411
+#    enabled: true
+#  sleuth:
+#    sampler:
+#      #收集追踪信息的比率，如果是0.1则表示只记录10%的追踪数据，如果要全部追踪，设置为1（实际场景不推荐，因为会造成不小的性能消耗）
+#      probability: 1.0
 server:
   port: 8006
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8000/eureka/   #注册中心eurka地址
+management:
+  endpoints:
+    web:
+      exposure:
+        # 2.x手动开启  这个是用来暴露 endpoints 的。由于 endpoints 中会包含很多敏感信息，除了 health 和 info 两个支持 web 访问外，其他的默认不支持 web 访问
+        include: routes
 zuul:
-  routes:
-    config-client:
-      path: /lxt/**
-      serviceId:  spring-cloud-consumer-hystrix
+#  routes:
+#    config-client:
+#      path: /lxt/**
+#      serviceId:  spring-cloud-consumer
   retryable: true #是否开启重试功能
 ribbon:
   MaxAutoRetries: 2 #对当前服务的重试次数
