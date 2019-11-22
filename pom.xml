@@ -8,7 +8,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>exureka-server</module>
+        <module>eureka-server</module>
         <module>service-provider</module>
         <module>service-provider1</module>
         <module>service-consumer</module>
@@ -34,7 +34,8 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Greenwich.RC1</spring-cloud.version>
+<!--        <spring-cloud.version>Greenwich.RC1</spring-cloud.version>-->
+        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
         <zipkin-version>2.11.8</zipkin-version>
     </properties>
 

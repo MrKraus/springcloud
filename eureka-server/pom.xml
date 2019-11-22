@@ -8,7 +8,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <groupId>com.lxt</groupId>
-    <artifactId>exureka-server</artifactId>
+    <artifactId>eureka-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>exureka-server</name>
     <description>Demo project for Spring Boot</description>
